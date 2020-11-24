@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import appStyle from './App.css';
+import React,{Component} from 'react'
+import Layout from './components/layout/Layout'
+import BurgerBuilder from './containers/burgerBuilder/BurgerBuilder'
 
-function App() {
+class App extends Component {
+ render(){
   return (
-    <div className={appStyle.App}>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> anad.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Layout>
+        <BurgerBuilder/>
+      </Layout>
     </div>
   );
+ }
 }
 
 export default App;
